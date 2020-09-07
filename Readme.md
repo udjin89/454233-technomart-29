@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Евгений Ильин](https://up.htmlacademy.ru/htmlcss/29/user/454233).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Думчев](https://htmlacademy.ru/profile/nikopol_fw).
 
 ---
 
