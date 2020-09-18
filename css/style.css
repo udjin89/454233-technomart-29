@@ -1,6 +1,7 @@
 /* vs code */
 /* font-family: 'PT Sans', sans-serif; */
 body{
+	margin: 0;
 	font-family: 'PT Sans','Arial', sans-serif;
 	/* font-family: 'Cuprum', 'Arial', sans-serif; */
 	font-size: 13px;
@@ -9,7 +10,7 @@ body{
 
 }
 img{
-
+	max-width: 100%
 }
 :root{
 
@@ -142,11 +143,14 @@ img{
 	color: var(--white);
 }
 .header-link:active{
-	opacity: 0.5;
+	color: var(--white-transparent50);
 
 }
 .header-link-order{
 	background-color: var(--basic-green);
+}
+.header-link-order:hover{
+	background-color: var(--hover-greenlight);
 }
 .brief-description{
 	font-family: 'Cuprum';
@@ -199,7 +203,7 @@ img{
 	text-decoration: none;
 }
 .list-navigation a:visited{
-
+	color: var(--white);
 }
 .list-navigation a:hover{
 	background-color: var(--basic-darkgrey);
