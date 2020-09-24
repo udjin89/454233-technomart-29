@@ -61,18 +61,16 @@
 	<div class="container">
 		<section class="products">
 			<h2 class="hidden">Наши товары</h2>
+			<div class="gallery-content">
+				<a href="#">
+					<img src="img/slide-perf.jpg" width="620" height="266" alt="Рабочий с перфоратором">
+				</a>
+				<a class="hidden" href="#">
+					<img src="img/slide-drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
+				</a>
+				<button class="button button-global button-open-catalog">Открыть каталог</button>
+			</div>
 			<ul class="list-products">
-				<li class="list-products-item list-products-item--slider">
-					<div class="gallery-content">
-						<a href="#">
-							<img src="img/slide-perf.jpg" width="620" height="266" alt="Рабочий с перфоратором">
-						</a>
-						<a class="hidden" href="#">
-							<img src="img/slide-drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
-						</a>
-						<button class="button button-global button-open-catalog">Открыть каталог</button>
-					</div>
-				</li>
 				<li class="list-products-item list-products-item--material">
 					<a class="" href="#">Материалы
 						<p class="product-description">На любой вкус</p>
@@ -88,6 +86,8 @@
 						<p class="product-description">для стройки</p>
 					</a>
 				</li>
+			</ul>
+			<ul class="list-products-serv">
 				<li class="list-products-item list-products-item--discount">
 					<a class="" href="#">Скидки 50%
 						<p class="product-description">На 350 товаров</p>
@@ -101,7 +101,7 @@
 			</ul>
 		</section>
 		<section class="popular-products">
-			<div>
+			<div class="popular-products--header">
 				<h2 class="title">Популярные товары:</h2>
 				<a class="button button-global button-all-products" href="#">Все популярные товары</a>
 			</div>
@@ -145,7 +145,7 @@
 			</ul>
 		</section>
 		<section class="popular-makers">
-			<div>
+			<div class="popular-makers--header">
 				<h2 class="title">Популярные Производители:</h2>
 				<a class="button button-global button-all-makers" href="#">все производители</a>
 			</div>
@@ -186,7 +186,7 @@
 		</div>
 	</section>
 
-	<div class="container">
+	<div class="container grid-company-contacts">
 		<section class="company">
 			<h2 class="title">Компания «Техномарт»</h2>
 			<p class="description company-description">
@@ -220,55 +220,58 @@
 </main>
 
 <!-- Footer -->
-<footer class="footer container">
-	<section class="contacts-footer">
-		<h2>адрес</h2>
-		<a class="logo-footer">
-			<img src="img/logo.svg" alt="Logo_Texnomart" width="220" hight="68">
-		</a>
-		<p class="contact-footer-description">
-			г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-			+7 (812) 555-05-55
-		</p>
-	</section>
-	<section class="footer-navigation">
-		<h2>навигация</h2>
+<footer class="footer">
+	<div class="container footer-top">
+		<section class="contacts-footer">
+			<h2 class="hidden">адрес</h2>
+			<a class="logo-footer">
+				<img src="img/logo.svg" alt="Logo_Texnomart" width="138" height="23">
+			</a>
+			<p class="contact-footer-description">
+				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+				+7 (812) 555-05-55
+			</p>
+		</section>
+		<section class="footer-navigation">
+			<h2 class="hidden">навигация</h2>
 
-		<ul class="list-navigation">
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Компания</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Новости</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="catalog.html">Каталог</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Доставка</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Контакты</a></li>
-		</ul>
-		<ul class="list-navigation">
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Материалы</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Техника</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Инструмент</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Спецпредложения</a></li>
-		</ul>
-	</section>
-
-	<div class="bottom-footer">
-		<p class="copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
-
-		<section class="social">
-			<h2>Соцсети</h2>
-			<ul class="list-social">
-				<li><a class="social-button" href="#">Вконтакте</a></li>
-				<li><a class="social-button" href="#">Фейсбук</a></li>
-				<li><a class="social-button" href="#">Инстаграм</a></li>
+			<ul class="list-navigation">
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Компания</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Новости</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="catalog.html">Каталог</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Доставка</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Контакты</a></li>
+			</ul>
+			<ul class="list-navigation">
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Материалы</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Техника</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Инструмент</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Спецпредложения</a></li>
 			</ul>
 		</section>
+	</div>
+	<div class="bottom-footer">
+		<div class="container">
+			<p class="copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
 
-		<p class="mail">
-			Обратная связь:<br>
-			<span class="mail-address">mail@htmlacademy.ru</span>
-		</p>
-		<p class="maker">
-			Разработано-<br>
-			<a href="http://www.htmlacademy.ru" class="site">htmlacademy.ru</a>
-		</p>
+			<section class="social">
+				<h2 class="hidden">Соцсети</h2>
+				<ul class="list-social">
+					<li><a class="social-button" href="#">Вконтакте</a></li>
+					<li><a class="social-button" href="#">Фейсбук</a></li>
+					<li><a class="social-button" href="#">Инстаграм</a></li>
+				</ul>
+			</section>
+
+			<p class="mail">
+				Обратная связь:<br>
+				<span class="mail-address">mail@htmlacademy.ru</span>
+			</p>
+			<p class="maker">
+				Разработано-<br>
+				<a href="http://www.htmlacademy.ru" class="site">htmlacademy.ru</a>
+			</p>
+		</div>
 	</div>
 </footer>
 <!-- Модальные окна -->

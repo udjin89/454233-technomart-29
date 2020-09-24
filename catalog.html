@@ -14,8 +14,8 @@
 <body class="page-body">
 <header class="header">
 	<div class="top-header">
-		<div class="container">
-			<h1>Магазин Техномарт</h1>
+		<div class="container grid-top-header">
+			<h1 class="hidden">Магазин Техномарт</h1>
 
 			<a class="logo-header" href="index.html">
 				<img class="logo" src="img/logo.svg" alt="Logo_Texnomart" width="108" height="18">
@@ -24,7 +24,7 @@
 			<input class="search" type="search" placeholder="Поиск:">
 
 			<a class="header-link" href="#">Закладки: 0</a>
-			<a class="header-link" href="#">Корзина: 10</a>
+			<a class="header-link header-link-cart-active" href="#">Корзина: 10</a>
 			<a class="header-link header-link-order" href="#">Оформить заказ</a>
 		</div>
 	</div>
@@ -61,30 +61,29 @@
 		</nav>
 	</div>
 </header>
-<main>
-	<div class="container">
+<main class="main">
+	<div class="container grid-catalog">
 		<ul class="breadcrumbs">
 			<li><a class="breadcrumbs-link" href="#">Главная</a></li>
 			<li><a class="breadcrumbs-link" href="#">Каталог</a></li>
 			<li><a class="breadcrumbs-link" href="#">Инструмент</a></li>
 			<li><a class="breadcrumbs-link">Перфораторы</a></li>
 		</ul>
-		<div>
-			<h1 class="title">Перфораторы</h1>
-		</div>
-		<section>
+
+		<h1 class="title title-catalog">Перфораторы</h1>
+
+		<section class="filter">
 			<h2>Фильтр товаров</h2>
 			<!-- Form -->
 		</section>
 
-		<section>
+		<section class="sort">
 			<h2>Сортировка товаров</h2>
 			<!-- Form -->
 		</section>
 
-		<section class="">
-			<h2>Список товаров</h2>
-			<ul class="list-popular-product">
+			<h2 class="hidden">Список товаров</h2>
+			<ul class="list-popular-product--catalog">
 				<li class="list-popular-product-item">
 					<button class="button button-buy">Купить</button>
 					<button class="button button-tabs">В закладки</button>
@@ -184,7 +183,6 @@
 					<a class="pagination-link" href="#">Следующая</a>
 				</li>
 			</ul>
-		</section>
 	</div>
 	<section class="about">
 		<div class="container">
@@ -199,40 +197,41 @@
 </main>
 
 <!-- Footer -->
-<footer class="footer container">
-	<section class="contacts-footer">
-		<h2>адрес</h2>
-		<a class="logo-footer">
-			<img src="img/logo.png" alt="Logo_Texnomart" width="220" hight="68">
-		</a>
-		<p class="contact-footer-description">
-			г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-			+7 (812) 555-05-55
-		</p>
-	</section>
-	<section class="footer-navigation">
-		<h2>навигация</h2>
+<footer class="footer">
+	<div class="container">
+		<section class="contacts-footer">
+			<h2 class="hidden">адрес</h2>
+			<a class="logo-footer">
+				<img src="img/logo.svg" alt="Logo_Texnomart" width="138" hight="23">
+			</a>
+			<p class="contact-footer-description">
+				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+				+7 (812) 555-05-55
+			</p>
+		</section>
+		<section class="footer-navigation">
+			<h2 class="hidden">навигация</h2>
 
-		<ul class="list-navigation">
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Компания</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Новости</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="catalog.html">Каталог</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Доставка</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Контакты</a></li>
-		</ul>
-		<ul class="list-navigation">
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Материалы</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Техника</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Инструмент</a></li>
-			<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Спецпредложения</a></li>
-		</ul>
-	</section>
-
-	<div class="bottom-footer">
+			<ul class="list-navigation">
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Компания</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Новости</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="catalog.html">Каталог</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Доставка</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link--footer" href="#">Контакты</a></li>
+			</ul>
+			<ul class="list-navigation">
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Материалы</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Техника</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Инструмент</a></li>
+				<li class="list-navigation-item"><a class="navigation-link navigation-link-product--footer" href="#">Спецпредложения</a></li>
+			</ul>
+		</section>
+	</div>
+	<div class="bottom-footer container">
 		<p class="copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
 
 		<section class="social">
-			<h2>Соцсети</h2>
+			<h2 class="hidden">Соцсети</h2>
 			<ul class="list-social">
 				<li><a class="social-button" href="#">Вконтакте</a></li>
 				<li><a class="social-button" href="#">Фейсбук</a></li>
