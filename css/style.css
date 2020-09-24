@@ -32,7 +32,6 @@
 body{
 	margin: 0;
 	font-family: 'PT Sans','Arial', sans-serif;
-	/* font-family: 'Cuprum', 'Arial', sans-serif; */
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: 400;
@@ -41,10 +40,23 @@ body{
 img{
 	max-width: 100%
 }
+.page{
+	/* Если нет контента, страница занимает весь экран */
+	height: 100%;
+}
+.page-body{
+	min-height: 100%;
 
+	display:  grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
+}
 .container{
 	width: 940px;
 	margin: 0 auto;
+}
+.hidden{
+	display: none;
 }
 
 /* Button style */
@@ -104,18 +116,35 @@ img{
 	line-height: 30px;
 	text-transform: uppercase;
 }
+
 /* Header */
 .header{
+	padding-bottom: 60px;
 	background-color: var(--special-background-grey);
-	/* background-color: var(--black-transparent01); */
 }
 .top-header{
+	height: 42px;
 	background-color: var(--basic-darkgrey);
 }
-.logo-header{
+.grid-top-header{
+	display: grid;
+	grid-template-rows: 42px;
+	grid-template-columns: min-content 1fr 150px 150px 150px;
+}
+.logo{
 
 }
+.logo-header{
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+	width: 220px;
+ 	height: 47px;
+ 	background: var(--basic-red);
+	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+ }
 .search{
+
 	font-family: 'Cuprum','Arial', sans-serif;
 	font-size: 18px;
 	line-height: 24px;
@@ -142,13 +171,18 @@ img{
 }
 .header-link:active{
 	color: var(--white-transparent50);
-
 }
 .header-link-order{
 	background-color: var(--basic-green);
 }
 .header-link-order:hover{
 	background-color: var(--hover-greenlight);
+}
+
+.grid-header{
+	display: grid;
+	grid-template-rows: min-content 60px;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 .brief-description{
 	font-family: 'Cuprum','Arial', sans-serif;
@@ -164,6 +198,8 @@ img{
 	font-weight: 700;
 	color: var(--basic-red);
 	text-decoration: none;
+	border: 3px solid var(--white);
+	box-sizing: border-box;
 }
 .contact-address{
 	font-family: 'Cuprum','Arial', sans-serif;
@@ -210,11 +246,16 @@ img{
 	color: var(--basic-greylight);
 }
 .navigation{
+	grid-column-start: 1;
+	grid-column-end: -1;
 	background-color: var(--basic-mediumgrey);
 	box-shadow: inset 0 -5px 0 var(--basic-darkgrey);
 }
 .list-navigation{
 	list-style: none;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr;
 }
 .navigation-link{
 	font-family: 'Cuprum','Arial', sans-serif;
@@ -237,6 +278,9 @@ img{
 /* Main */
 /* Products */
 .products{
+	/* display: grid; */
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
 	background-color: var(--white);
 }
 .list-products{
