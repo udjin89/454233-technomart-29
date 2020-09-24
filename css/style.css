@@ -278,15 +278,24 @@ img{
 /* Main */
 /* Products */
 .products{
-	/* display: grid; */
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
 	background-color: var(--white);
 }
 .list-products{
 	padding: 0;
 	list-style: none;
 	color: var(--white);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	row-gap: 20px;
+	column-gap: 20px;
+
+	grid-template-areas: 
+		"material tools	tehc"
+		"slider slider discount"
+		"slider slider delivery"
+	;
 }
 .list-products a {
 	font-family: 'Cuprum','Arial', sans-serif;
@@ -315,20 +324,28 @@ img{
 .list-products-item{
 
 }
+.list-products-item--slider{
+	grid-area: slider;
+}
 .list-products-item--material
 {
+	grid-area: material;
 	background-color: var(--special-yellow);	
 }
 .list-products-item--tools{
+	grid-area: tools;
 	background-color: var(--special-blue);
 }
 .list-products-item--tehc{
+	grid-area: tehc;
 	background-color: var(--special-lilac);
 }
 .list-products-item--discount{
+	grid-area: discount;
 	background-color: var(--special-greenlight);
 }
 .list-products-item--delivery{
+	grid-area: delivery;
 	background-color: var(--special-yellowlight);
 }
 
