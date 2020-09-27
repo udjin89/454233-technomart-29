@@ -699,16 +699,18 @@ img{
 	text-decoration: none;
 }
 
-/* Catalog */
+/*+++++++++++++++++++++++++ Catalog +++++++++++++++++++++++++ */
 .grid-catalog{
 	display: grid;
 	align-content: start;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 50px 50px 38px 1fr 38px;
+  grid-template-rows: 60px 90px 38px 1fr 38px;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 .breadcrumbs{
 	margin: 0;
-	padding: 0;
+  padding: 0;
 	display: flex;
 	flex-direction: row; /* значение по умолчанию, главная ось направлена слева направо */
 	justify-self: flex-start; /* элементы располагаются у начала главной оси */
@@ -717,7 +719,7 @@ img{
 	grid-column-start: 1;
 	grid-column-end: -1;
 
-	outline: 5px solid rgba(0, 255, 0, 0.7);
+	outline: 5px solid rgba(222, 255, 0, 0.7);
  	outline-offset: -5px;
 }
 .breadcrumbs-link{
@@ -737,22 +739,31 @@ img{
 }
 .title-catalog{
 	margin: 0;
-	padding: 0;
+  padding: 0;
+  /* height: 89px; */
 	grid-column-start: 1;
 	grid-column-end: -1;
-	background-color: var(--special-background-grey);
+  background-color: var(--special-background-grey);
+
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
 }
 .filter{
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 3;
-	grid-row-end: -1;
+  grid-row-end: -1;
+
+  outline: 5px solid rgba(0, 81, 255, 0.7);
+  outline-offset: -5px;
 }
 .sort{
 	grid-column-start: 2;
 	grid-column-end: -1;
 	grid-row-start: 3;
-	grid-row-end: 4;
+  grid-row-end: 4;
+  outline: 5px solid rgba(204, 0, 255, 0.7);
+  outline-offset: -5px;
 }
 .list-popular-product--catalog{
 	margin: 0;
@@ -767,15 +778,23 @@ img{
 	margin: 0;
 	display: grid;
 	grid-template-columns: 220px 220px 220px;
-	column-gap:  20px;
-	list-style: none;
+  column-gap:  20px;
+  row-gap: 20px;
+  list-style: none;
+
+  outline: 5px solid rgba(255, 0, 13, 0.7);
+  outline-offset: -2px;
 }
 .pagination{
 	margin: 0;
 	padding: 0;
 	grid-column-start: 2;
 	grid-column-end: -1;
-	list-style: none;
+  list-style: none;
+
+  display: flex;
+  outline: 5px solid rgba(255, 81, 0, 0.7);
+  outline-offset: -5px;
 }
 .pagination-link{
 	font-size: 13px;
