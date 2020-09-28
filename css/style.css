@@ -210,23 +210,42 @@ img{
 	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
-	color: var(--basic-red);
+  color: var(--basic-red);
+
+  margin: auto;
+}
+.contacts-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .contact-phone{
 	font-family: 'Cuprum','Arial', sans-serif;
-	font-size: 21px;
-	line-height: 30px;
+  font-size: 21px;
+	line-height: 40px;
 	font-weight: 700;
 	color: var(--basic-red);
 	text-decoration: none;
 	border: 3px solid var(--white);
-	box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  height: 45px;
+
 }
 .contact-address{
 	font-family: 'Cuprum','Arial', sans-serif;
 	font-size: 14px;
 	line-height: 24px;
-	color: var(--basic-mediumgrey);
+  color: var(--basic-mediumgrey);
+  text-align: center;
+}
+.account-area{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.account-area.account-area--login{
+  flex-direction: column;
 }
 .button-account{
 	font-family: 'Cuprum','Arial', sans-serif;
@@ -235,7 +254,10 @@ img{
 	color: var(--black);
 	border: none;
 	outline: none;
-	background-color: var(--white);
+  background-color: var(--white);
+
+  height: 45px;
+  margin-left: 10px;
 }
 .button-account:hover{
 	color: var(--basic-red);
@@ -315,7 +337,7 @@ img{
 /* Main */
 /* Products */
 .products{
-  	padding-top: 59px;
+  padding-top: 59px;
  	padding-bottom: 59px;
 	background-color: var(--white);
 	display: grid;
@@ -509,12 +531,11 @@ img{
 	width: 220px;
 	height: 145px;
 	background-color: var(--white);
-	/* border:  1px solid red; */
 	border: 1px solid var(--special-background-grey);
-	/* border-style: inset; */
+
 	display: flex;
-  	align-items: center; /*выравнивания элементов вдоль поперечной оси*/
-  	justify-content: center;
+  align-items: center; /*выравнивания элементов вдоль поперечной оси*/
+  justify-content: center;
 }
 .list-makers-item:hover{
 	filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.15));
@@ -524,10 +545,12 @@ img{
 	filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.15));
 }
 .maker-link{
-	/* display: flex; */
-	/* margin: 50px auto; */
-	/* width: 220px; */
-	/* height: 145px;	 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+	width: 220px;
+	height: 145px;
 }
 
 /* Section services */
@@ -570,10 +593,12 @@ img{
 .list-services-item:hover{
 	background-color: var(--basic-darkgrey);
 }
-.activate{
+.activate,
+.activate:hover{
 	color: var(--basic-mediumgrey);
 	background-color: var(--white);
 }
+
 
 /* Section company */
 .grid-company-contacts{
