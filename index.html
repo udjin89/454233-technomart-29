@@ -20,12 +20,15 @@
 			<a class="logo-header">
 				<img class="logo" src="img/logo.svg" alt="Logo_Texnomart" width="108" height="18">
 			</a>
-
-			<input class="search" type="search" placeholder="Поиск:">
-
-			<a class="header-link" href="#">Закладки: 0</a>
-			<a class="header-link" href="#">Корзина: 0</a>
-			<a class="header-link header-link-order" href="#">Оформить заказ</a>
+      <p class="search-fill">
+        <input class="search" type="search" placeholder="Поиск:">
+        <svg class="icon-search" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+        </svg>
+      </p>
+			<a class="header-link header-link--bookmark" href="#">Закладки: 0</a>
+			<a class="header-link header-link--cart" href="#">Корзина: 0</a>
+			<a class="header-link header-link--order" href="#">Оформить заказ</a>
 		</div>
 	</div>
 	<div class="container grid-header">
@@ -62,40 +65,33 @@
 		<section class="products">
 			<h2 class="hidden">Наши товары</h2>
 			<div class="gallery-content">
-				<a href="#">
+          <!-- <h2 class="title">Перфораторы</h2> -->
 					<img src="img/slide-perf.jpg" width="620" height="266" alt="Рабочий с перфоратором">
-				</a>
-				<a class="hidden" href="#">
-					<img src="img/slide-drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
-				</a>
+					<img class="hidden" src="img/slide-drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
 				<a class="button button-global button-open-catalog" href="catalog.html">Открыть каталог</a>
 			</div>
 			<ul class="list-products">
 				<li class="list-products-item list-products-item--material new-thing">
-					Материалы
+					<h3 class="list-products-item--title">Материалы</h3>
 						<a class="product-description" href="#">На любой вкус</a>
 				</li>
 				<li class="list-products-item list-products-item--tools">
-					<a class="" href="#">Инструмент
-						<p class="product-description">На все случаи</p>
-					</a>
+					<h3 class="list-products-item--title">Инструмент</h3>
+					<a class="product-description" href="#">На все случаи</a>
 				</li>
 				<li class="list-products-item list-products-item--tehc">
-					<a class="" href="#">Техника
-						<p class="product-description">для стройки</p>
-					</a>
+					<h3 class="list-products-item--title">Техника</h3>
+					<a class="product-description" href="#">для стройки</a>
         </li>
 			</ul>
 			<ul class="list-products-serv">
 				<li class="list-products-item list-products-item--discount">
-					<a class="" href="#">Скидки 50%
-						<p class="product-description">На 350 товаров</p>
-					</a>
+					<h3 class="list-products-item--title">Скидки 50%</h3>
+					<a class="product-description" href="#">На 350 товаров</a>
 				</li>
 				<li class="list-products-item list-products-item--delivery">
-					<a class="" href="#">Доставка
-						<p class="product-description">Бесплатно</p>
-					</a>
+					<h3 class="list-products-item--title">Доставка</h3>
+						<a class="product-description" href="#">Бесплатно</a>
 				</li>
 			</ul>
 		</section>
@@ -110,36 +106,39 @@
             <button class="button button-buy">Купить</button>
             <button class="button button-tabs">В закладки</button>
         </div>
-					<img class="img-product" src="img/boschbfg-9000.jpg" width="185" height="164" alt="">
+					<img class="img-product" src="img/boschbfg-9000.jpg" width="218" height="180" alt="">
 					<h3 class="popular-product-description">Перфоратор BOSCH BFG 9000</h3>
 					<s class="price price-past">32500 Р.</s>
 					<p class="price price-present">25500 Р.</p>
 				</li>
 				<li class="list-popular-product-item new-thing">
-					<button class="button button-buy">Купить</button>
-					<button class="button button-tabs">В закладки</button>
-
-					<img class="img-product" src="img/boschbfg-3000.jpg" width="144" height="128" alt="">
+          <div class="buttons-hover-wrap">
+            <button class="button button-buy">Купить</button>
+            <button class="button button-tabs">В закладки</button>
+          </div>
+					<img class="img-product" src="img/boschbfg-3000.jpg" width="218" height="180" alt="">
 					<h3 class="popular-product-description">Перфоратор BOSCH BFG 3000</h3>
 					<s class="price price-past">22500 Р.</s>
 					<p class="price price-present">15500 Р.</p>
 				</li>
 				<li class="list-popular-product-item">
-					<button class="button button-buy">Купить</button>
-					<button class="button button-tabs">В закладки</button>
-
-					<img class="img-product" src="img/boschbfg-6000.jpg" width="144" height="128" alt="">
+          <div class="buttons-hover-wrap">
+            <button class="button button-buy">Купить</button>
+            <button class="button button-tabs">В закладки</button>
+          </div>
+					<img class="img-product" src="img/boschbfg-6000.jpg" width="218" height="180" alt="">
 					<h3 class="popular-product-description">Перфоратор BOSCH BFG 6000</h3>
 					<s class="price price-past">30500 Р.</s>
 					<p class="price price-present">25500 Р.</p>
 				</li>
 				<li class="list-popular-product-item new-thing">
-					<button class="button button-buy">Купить</button>
-					<button class="button button-tabs">В закладки</button>
-
-					<img class="img-product" src="img/boschbfg-2000.jpg" width="144" height="128" alt="">
+          <div class="buttons-hover-wrap">
+            <button class="button button-buy">Купить</button>
+            <button class="button button-tabs">В закладки</button>
+          </div>
+					<img class="img-product" src="img/boschbfg-2000.jpg" width="218" height="180" alt="">
 					<h3 class="popular-product-description">Перфоратор BOSCH BFG 2000</h3>
-					<s class="price price-past"></s>
+					<s class="price no-price-past">0</s>
 					<p class="price price-present">12500 Р.</p>
 				</li>
 			</ul>
