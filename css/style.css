@@ -1232,11 +1232,11 @@ img{
 .filters{
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 3;
+	grid-row-start: 4;
   grid-row-end: -1;
 
-  /* outline: 5px solid rgba(0, 81, 255, 0.7);
-  outline-offset: -5px; */
+  outline: 5px solid rgba(0, 81, 255, 0.7);
+  outline-offset: -5px;
   /* width: 220px; */
 }
 .filter{
@@ -1525,13 +1525,20 @@ img{
 
 
 /* +++++++++++Modal+++++++++++++ */
-
-.modal-write-us{
-  position: relative;
-  width: 620px;
-  height: 430px;
+.modal{
+  position: fixed;
+  z-index: 100;
+  margin:auto;
+  top: 120px;
+  left:0;
+  right:0;
   background-color: var(--white);
   border-top: 7px solid var(--basic-red);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.modal-write-us{
+  width: 620px;
+  min-height: 430px;
 }
 .form-write-us{
   /* display: flex; */
@@ -1584,7 +1591,9 @@ img{
   grid-row-end: 3;
 }
 .text-comment{
-  /* width: 100%; */
+  min-height: 114px;
+  max-height: 400px;
+  resize: vertical;
 }
 .bacground-wrap{
   height: 112px;
@@ -1598,4 +1607,12 @@ img{
 }
 .button-send{
   width: 100%;
+}
+
+.modal-map{
+  width: 940px;
+  height: 450px;
+}
+.modal-map iframe{
+  border: none;
 }

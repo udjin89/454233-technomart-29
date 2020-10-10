@@ -298,9 +298,9 @@
 </footer>
 <!-- Модальные окна -->
 
-<section class="modal modal-write-us">
+<section class="hidden modal modal-write-us">
   <h2 class="hidden">Напишите нам</h2>
-  <button class="button-close">
+  <button class="button-close" aria-label="Закрыть">
     <img src="img/icon-close.png" alt="Закрыть">
   </button>
   <form class="form-write-us" action="">
@@ -319,9 +319,14 @@
   </form>
 </section>
 
-<section class="modal modal-map">
-	<h2>Карта</h2>
-	<!-- Карта -->
+<section class=" hidden modal modal-map">
+  <h2 class="hidden">Карта</h2>
+  <button class="button-close" aria-label="Закрыть">
+    <img src="img/icon-close.png" alt="Закрыть">
+  </button>
+  <!-- Карта -->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6081195149852!2d30.32330650958949!3d59.93864459953058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1602327903681!5m2!1sru!2sru"
+  width="100%" height="450" title="Офис компании: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </section>
 </body>
 
