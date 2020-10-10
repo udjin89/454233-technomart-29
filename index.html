@@ -299,17 +299,19 @@
 <!-- Модальные окна -->
 
 <section class="modal modal-write-us">
-	<h2>Напишите нам</h2>
+  <h2 class="hidden">Напишите нам</h2>
+  <button class="button-close">Закрыть</button>
   <form class="form-write-us" action="">
     <div class="modal-container grid-form-write-us">
       <label class="label-name">Ваше имя:<br><input class="field field-name" type="text" placeholder="Имя Фамилия"></label>
       <label class="label-email">Ваш e-mail:<br><input class="field field-email" type="email" placeholder="email@example.com"></label>
-      <p>Текст письма:</p>
-      <textarea name="comment" id="comment-field" rows="10">В свободной форме</textarea>
+      <p class="text-write-us">Текст письма:
+        <textarea class="field text-comment" name="comment" id="comment-field" rows="10" placeholder="В свободной форме"></textarea>
+      </p>
     </div>
     <div class="bacground-wrap">
-      <div class="modal-container">
-          <input type="submit" class="button button-global button-send" value="Отправить"></button>
+      <div class="modal-container center-box">
+          <input type="submit" class="button button-global button-send" value="Отправить"></input>
       </div>
     </div>
   </form>
