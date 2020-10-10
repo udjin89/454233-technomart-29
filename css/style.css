@@ -159,7 +159,11 @@ img{
 }
 .button-close{
   position: absolute;
-  right: 0;
+  top: 14px;
+  right: 11px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
 .title{
   margin: 0;
