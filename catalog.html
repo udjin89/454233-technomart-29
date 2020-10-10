@@ -44,7 +44,11 @@
         <p class="contact-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <div class="account-area  account-area--login">
-        <button class="button-account button-account--login">Равшан Джамшутович</button>
+        <p class="login-fill">
+          <button class="button-account button-account--login">Равшан Джамшутович</button>
+          <svg class="icon-logout" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5"/><path d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" fill="#C5C5C5"/></svg>
+          <svg class="icon-user" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" fill="#C5C5C5"/></svg>
+        </p>
         <ul class="list-account-link">
           <li class="list-account-link-item">
             <a class="account-link" href="#">Мои заказы</a>
@@ -73,14 +77,77 @@
         <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#"><img src="img/icon-home.svg" alt="Главная"></a></li>
         <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Каталог</a></li>
         <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Инструмент</a></li>
-        <li class="breadcrumbs-item"><a class="breadcrumbs-link">Перфораторы</a></li>
+        <li class="breadcrumbs-item breadcrumbs-item--current"><a class="breadcrumbs-link">Перфораторы</a></li>
       </ul>
 
       <h1 class="title title-catalog">Перфораторы</h1>
 
-      <section class="filter">
-        <h2>Фильтр товаров</h2>
+      <section class="filters">
+        <h2 class="hidden">Фильтр товаров</h2>
         <!-- Form -->
+        <form class="filter">
+          <!-- Цена -->
+          <fieldset class="filter-item">
+            <legend>Цена:</legend>
+            <div class="range-filter">
+              <div class="range-control">
+                <div class="scale">
+                  <div class="bar" style="width: 30%; margin-left: 10%;"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 10%;"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 40%;"></div>
+              </div>
+              <div class="price-control">
+                <label class="min-price">
+                  <input type="number" name="min-price" value="0">
+                </label>
+                -
+                <label class="max-price">
+                  <input type="number" name="max-price" value="30000">
+                </label>
+
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend>Производители:</legend>
+            <ul class="filter-option">
+              <li class="filter-option-item">
+                <input type="checkbox" id="Bosch" class="filter-input-checkbox hidden">
+                <label for="Bosch" class="label">Bosch</label>
+              </li>
+              <li class="filter-option-item">
+                <input type="checkbox" id="Interskol" class="filter-input-checkbox hidden">
+                <label for="Interskol" class="label">Интерскол</label>
+              </li>
+             <li class="filter-option-item">
+               <input type="checkbox" id="Makita" class="filter-input-checkbox hidden">
+               <label for="Makita" class="label">Makita</label>
+             </li>
+             <li class="filter-option-item">
+                <input type="checkbox" id="DeWalt" class="filter-input-checkbox hidden">
+                <label for="DeWalt" class="label">DeWalt</label>
+             </li>
+             <li class="filter-option-item">
+                <input type="checkbox" id="Hitachi" class="filter-input-checkbox hidden">
+                <label for="Hitachi" class="label">Hitachi</label>
+              </li>
+            </ul>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend>Питание:</legend>
+          <ul class="filter-option">
+            <li>
+              <input type="radio" name="power" id="battery" class="filter-input-radio hidden">
+              <label for="battery" class="label">Аккумуляторные</label>
+            </li>
+            <li></li>
+              <input type="radio"  name="power" id="networking" class="filter-input-radio hidden">
+              <label for="networking" class="label">Сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        </form>
       </section>
 
       <section class="sort">
