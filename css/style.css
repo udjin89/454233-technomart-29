@@ -1633,7 +1633,7 @@ img{
 }
 .modal-write-us{
   width: 620px;
-  min-height: 430px;
+  /* min-height: 430px; */
 }
 .form-write-us{
   /* display: flex; */
@@ -1707,7 +1707,7 @@ img{
 
 .modal-map{
   width: 940px;
-  height: 430px;
+  height: 450px;
 }
 .modal-map iframe{
   border: none;
