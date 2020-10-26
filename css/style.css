@@ -18,9 +18,9 @@
   --special-yellowlight: #FFD180;
   --special-light: #F9F5F0;
   --special-darkblue: #212A3A;
-  --special-beige:#F7F3EC;
+  --special-beige: #F7F3EC;
   --special-scale-color: #D7DCDE;
-  --special-greyight:#B5B5B5;
+  --special-greyight: #B5B5B5;
 
 	--hover-greenlight: #5FBB2D;
 	--active-greendark: #518534;
@@ -36,7 +36,7 @@
 }
 body{
 	margin: 0;
-	font-family: 'PT Sans','Arial', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: 400;
@@ -57,7 +57,6 @@ img{
 }
 .page-body{
 	min-height: 100%;
-
 	display:  grid;
 	grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -83,7 +82,7 @@ img{
 
 /* Button style */
 .button{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	text-align: center;
@@ -185,7 +184,7 @@ img{
 .title{
   margin: 0;
   padding: 0;
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 400;
 	font-size: 30px;
 	line-height: 30px;
@@ -218,10 +217,12 @@ img{
  	height: 47px;
  	background: var(--basic-red);
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+  /* border-bottom: 5px solid var(--active-red); */
   padding-bottom: 4px;
  }
  .logo-header:active{
   background: var(--active-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
  }
 .search-fill{
   margin: 0;
@@ -232,19 +233,18 @@ img{
   position: absolute;
   top: 12px;
   left: 16px;
-}
-.icon-search path{
+  fill: var(--white);
   opacity: 0.3;
 }
-.search:hover + .icon-search path{
+.search:hover + .icon-search{
   opacity: 1;
 }
-.search:focus + .icon-search path{
+.search:focus + .icon-search{
   opacity: 1;
   fill: var(--basic-red);
 }
 .search{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	background-color: transparent;
@@ -267,7 +267,7 @@ img{
 }
 .header-link
 {
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
@@ -347,7 +347,7 @@ img{
 	grid-template-columns: 1fr 1fr 1fr;
 }
 .brief-description{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
@@ -359,7 +359,7 @@ img{
   /* margin: 0 auto; */
 }
 .contact-phone{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
 	font-weight: 700;
 	color: var(--basic-red);
@@ -385,7 +385,7 @@ img{
   background-position: 0 0;
 }
 .contact-address{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 14px;
 	line-height: 24px;
   color: var(--basic-mediumgrey);
@@ -401,44 +401,30 @@ img{
   margin-top: 45px;
   padding-left: 12px;
 }
-.enter-fill{
- position: relative;
-}
 .enter{
   position: relative;
-  padding-left: 25px;
+  padding: 13px 0px 12px 45px;
 }
 .register{
   padding: 12px 24px;
 }
-/* .enter::before{
-  position: absolute;
-  content:"";
-  width: 20px;
-  height: 17px;
-  top: 13px ;
-  left: 19px;
-  background-image: url(../img/icon-login.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-} */
 .icon-enter{
   position: absolute;
   width: 20px;
   height: 17px;
   top: 15px ;
-  left: 27px;
-
+  left: 18px;
+  fill: var(--basic-greylight);
 }
-.enter:hover + .icon-enter path,
-.icon-logout:hover path,
-.icon-user:hover path
+.enter:hover  .icon-enter,
+.icon-logout:hover,
+.icon-user:hover
 {
   fill: var(--basic-grey);
 }
-.enter:active + .icon-enter path,
-.icon-logout:active path,
-.icon-user:active path
+.enter:active  .icon-enter,
+.icon-logout:active,
+.icon-user:active
 {
   fill: var(--basic-greylight);
 }
@@ -447,7 +433,7 @@ img{
   justify-content: flex-start;
 }
 .button-account{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 21px;
   line-height: 21px;
   min-width: 120px;
@@ -469,8 +455,11 @@ img{
 	color: var(--basic-greylight);
 }
 .button-account--login{
+  display: block;
+  text-decoration: none;
   margin: 0;
-  padding-left: 55px;
+  padding-top: 12px;
+  padding-left: 57px;
   padding-right: 55px;
   width: 100%;
 }
@@ -478,11 +467,13 @@ img{
   position: absolute;
   top: 13px;
   right: 15px;
+  fill: var(--basic-greylight);
 }
 .icon-user{
   position: absolute;
   top: 13px;
   left: 15px;
+  fill: var(--basic-greylight);
 }
 .button-account--login:hover{
 	color: var(--black);
@@ -526,7 +517,7 @@ img{
   border-radius: 50%;
 }
 .account-link{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 18px;
@@ -572,7 +563,7 @@ img{
   padding-right: 28px;
   padding-left: 28px;
 
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	color: var(--white);
@@ -664,7 +655,7 @@ img{
 	color: var(--white);
 }
 .list-products-item--title{
-  font-family: 'Cuprum','Arial', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 700;
@@ -674,7 +665,7 @@ img{
   margin-left: 23px;
 }
 .product-description{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -797,7 +788,7 @@ img{
 	height: 30px;
 	transform: rotate(45deg);
 
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 30px;
@@ -832,7 +823,7 @@ img{
 .img-product{
   /* margin-top: 20px; */
   object-fit: scale-down;
-  max-height: 180px;
+  min-height: 180px;
 }
 .popular-product-description{
 	font-weight: 700;
@@ -842,6 +833,13 @@ img{
   max-width: 185px;
   margin: auto 0 0 0;
 
+ /* Обязательные объявления: */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  /* Ограничиваем блок текста тремя строками */
+  -webkit-line-clamp: 3;
 }
 .price{
 	margin: 0;
@@ -885,7 +883,6 @@ img{
 	padding: 0;
 	margin: 0;
 	list-style: none;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -979,7 +976,7 @@ img{
   background-position: right bottom;
 }
 .list-services-item{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 30px;
@@ -1024,7 +1021,7 @@ img{
   margin-bottom: 27px;
 }
 .list-partners-item{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
   line-height: 24px;
@@ -1085,7 +1082,7 @@ img{
    max-width: 380px;
  }
  .contact-footer-description{
- 	font-family: 'Cuprum','Arial', sans-serif;
+ 	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 24px;
@@ -1138,7 +1135,7 @@ img{
 	opacity: 0.5;
  }
 .copyright{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 18px;
@@ -1177,7 +1174,7 @@ img{
   color: tomato;
 }
 .mail{
-	font-family: Cuprum,'Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
@@ -1196,7 +1193,7 @@ img{
 	text-decoration: none;
 }
 .maker{
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 18px;
@@ -1222,13 +1219,13 @@ img{
   padding-bottom: 59px;
 	display: grid;
 	align-content: start;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 60px min-content 38px 1fr min-content;
+	grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
   /* row-gap: 20px; */
   column-gap: 20px;
 }
 .breadcrumbs{
-	margin: 0;
+	margin: 18px 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -1236,10 +1233,6 @@ img{
 	flex-direction: row; /* значение по умолчанию, главная ось направлена слева направо */
 	justify-self: flex-start; /* элементы располагаются у начала главной оси */
   align-items: center;
-
-	grid-column-start: 1;
-	grid-column-end: -1;
-
 	/* outline: 5px solid rgba(222, 255, 0, 0.7);
   outline-offset: -5px; */
 }
@@ -1289,30 +1282,17 @@ img{
 	grid-column-end: -1;
   background-color: var(--special-background-grey);
 }
-.title-filter{
-  display: block;
-  margin: 0;
-  /* margin-top: 20px; */
-  padding-top: 10px;
-  padding-left: 18px;
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
-  background-color: var(--special-beige);
-  border-radius: 2px;
-}
 .filters{
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 4;
+	grid-row-start: 1;
   grid-row-end: -1;
-
   /* outline: 5px solid rgba(0, 81, 255, 0.7);
   outline-offset: -5px; */
-  margin-top: 13px;
+  /* margin-top: 13px; */
 }
 .filter{
-
+  margin-top: 15px;
 }
 
 .label{
@@ -1393,8 +1373,8 @@ img{
   /* margin-bottom: 20px; */
 	grid-column-start: 2;
 	grid-column-end: -1;
-	grid-row-start: 3;
-  grid-row-end: 4;
+	grid-row-start: 1;
+  grid-row-end: 2;
   background-color: var(--special-beige);
   /* outline: 5px solid rgba(204, 0, 255, 0.7);
   outline-offset: -5px; */
@@ -1402,16 +1382,27 @@ img{
   align-items: center;
   justify-content: flex-start;
 }
-.sort-title-filter{
+.title-filter{
+  margin: 0;
+  /* margin-top: 20px; */
+  padding-top: 9px;
+  padding-left: 18px;
+  padding-bottom: 10px;
+}
+.title-sort{
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-top: 10px;
+  background-color: var(--special-beige);
+  border-radius: 2px;
+}
+.sort-title-filter{
+  margin-top: 9px;
+  margin-bottom: 10px;
   margin-left: 19px;
   margin-right: 140px;
 }
-.sort-type
-{
+.sort-type{
   margin: 0;
   font-size: 13px;
   line-height: 18px;
@@ -1439,26 +1430,29 @@ img{
 .sort-type--function{
   margin-right: 46px;
 }
+.sort-direction{
+  fill: var(--basic-greylight);
+}
 .sort-direction--up{
   margin-right: 21px;
   transform: rotate(180deg);
 }
-.sort-direction--active path{
+.sort-direction--active{
   fill: var(--basic-red);
 }
 .sort-direction--down{
 
 }
-.sort-direction--up:hover path,
-.sort-direction--down:hover path{
+.sort-direction--up:hover,
+.sort-direction--down:hover{
   fill: var(--black);
 }
 .section-list-products{
 	grid-column-start: 2;
 	grid-column-end: -1;
-	grid-row-start: 4;
+	grid-row-start: 2;
   grid-row-end: -2;
-  margin-top: 27px;
+  margin-top: 28px;
 }
 .list-popular-product--catalog{
 	margin: 0;
@@ -1466,7 +1460,6 @@ img{
 
   display: flex;
   flex-wrap: wrap;
-
 }
 .pagination{
   margin: 0;
@@ -1523,7 +1516,7 @@ img{
 }
 .add-success{
   margin: 73px 0 67px 0;
-	font-family: 'Cuprum','Arial', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 30px;
@@ -1638,6 +1631,13 @@ img{
 .price-control input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
 .filter-option{
   list-style: none;
   margin: 0;
@@ -1650,7 +1650,7 @@ img{
 .button-form--filter{
   padding: 10px 0;
   width: 100%;
-  font-family: 'PT Sans','Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--black);
@@ -1678,7 +1678,7 @@ img{
   display: block;
 }
 .title-slide{
-  font-family: 'Cuprum','Arial', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
@@ -1688,7 +1688,7 @@ img{
   padding: 23px 0 5px 0;
 }
 .slide-description{
-  font-family: 'Cuprum','Arial', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
@@ -1758,7 +1758,7 @@ img{
   padding: 0;
 }
 .grid-form-write-us{
-  font-family: 'Cuprum','Arial', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 24px;
   margin-top: 40px;
