@@ -46,15 +46,15 @@
         <p class="contact-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <div class="account-area">
-        <a class="button-account enter">
+        <a class="button-account enter" href="#">
           <svg class="icon-enter" width="21" height="17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.88 8.5L6 0v6H0v5h6v6l8.88-8.5z" />
             <path
               d="M16.99 15.01h-5.03V17h5.03c2.17 0 3-1.81 3.03-3.03V3.03C19.98 1.8 19.16 0 16.98 0h-5.03v1.99h5.03c.84 0 .99.68 1 1.06v10.9c-.01.38-.16 1.06-1 1.06z" />
-            </svg>
+          </svg>
           Войти
         </a>
-        <a class="button-account register">Регистрация</a>
+        <a class="button-account register" href="#">Регистрация</a>
       </div>
       <nav class="navigation">
         <ul class="list-navigation">
@@ -78,7 +78,7 @@
 
         <div class="gallery-content slider">
           <ul class="slider-list">
-            <li class="slider-item slider-item--perf  slider-current">
+            <li class="slider-item slider-item--perf slider-current">
               <h2 class="title-slide">Перфораторы</h2>
               <p class="slide-description">Настоящие мужские игрушки</p>
               <!-- <img src="img/slide-perf.jpg" width="620" height="266" alt="Рабочий с перфоратором"> -->
@@ -207,20 +207,44 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
         </div>
-        <ul class="list-services">
-          <li class="list-services-item activate">Доставка</li>
-          <li class="list-services-item">Гарантия</li>
-          <li class="list-services-item">Кредит</li>
-        </ul>
-        <div class="description-services-item--activate description-services-item--delivery">
-          <h3 class="title">Доставка</h3>
+        <div class="slider-services">
+          <ul class="list-services">
+            <a class="list-services-item activate" href="#">Доставка</a>
+            <a class="list-services-item" href="#">Гарантия</a>
+            <a class="list-services-item" href="#">Кредит</a>
+          </ul>
+          <ul>
+            <div class="description-services-item--activate description-services-item--delivery">
+              <h3 class="title">Доставка</h3>
 
-          <p class="description services-description--activate">
-            Мы с удовольствием доставим ваш товар прямо<br>
-            к вашему подъезду совершенно бесплатно!<br>
-            Ведь мы неплохо заработаем,<br>
-            поднимая его на ваш этаж!
-          </p>
+              <p class="description services-description--activate">
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
+              </p>
+            </div>
+            <div class="description-services-item--guarantee">
+              <h3 class="title">Гарантия</h3>
+
+              <p class="description">
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
+              </p>
+            </div>
+            <div class="description-services-item--credit">
+              <h3 class="title">Кредит</h3>
+
+              <p class="description">
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
+              </p>
+            </div>
+          </ul>
         </div>
       </div>
     </section>
@@ -368,10 +392,11 @@
       <img src="img/icon-close.png" alt="Закрыть">
     </button>
     <svg class="icon-mark" width="66" height="66" xmlns="http://www.w3.org/2000/svg">
-      <path d="M33 66c18.225 0 33-14.775 33-33S51.225 0 33 0 0 14.775 0 33s14.775 33 33 33z" fill="#63A63E"/>
+      <path d="M33 66c18.225 0 33-14.775 33-33S51.225 0 33 0 0 14.775 0 33s14.775 33 33 33z" fill="#63A63E" />
       <path
-        d="M49.641 21.066a1.003 1.003 0 00-1.414 0L29.788 39.504a1.003 1.003 0 01-1.414 0l-8.14-8.139a1.003 1.003 0 00-1.414 0L15.285 34.9a1.003 1.003 0 000 1.414l13.089 13.09a1.003 1.003 0 001.414 0l3.536-3.536 1.414-1.414 18.438-18.438a1.003 1.003 0 000-1.414l-3.535-3.536z" fill="#fff"/>
-      </svg>
+        d="M49.641 21.066a1.003 1.003 0 00-1.414 0L29.788 39.504a1.003 1.003 0 01-1.414 0l-8.14-8.139a1.003 1.003 0 00-1.414 0L15.285 34.9a1.003 1.003 0 000 1.414l13.089 13.09a1.003 1.003 0 001.414 0l3.536-3.536 1.414-1.414 18.438-18.438a1.003 1.003 0 000-1.414l-3.535-3.536z"
+        fill="#fff" />
+    </svg>
     <p class="add-success">Товар добавлен в корзину!</p>
     <div class="modal-add-cart--bottom">
       <button class="button button-global button-order">Оформить заказ</button>
