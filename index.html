@@ -96,10 +96,11 @@
             <button type="button" class="slider-control--button slider-control--left" aria-label="Назад"></button>
             <button type="button" class="slider-control--button slider-control--right" aria-label="Вперед"></button>
           </div>
+          <div class="slider-tabs">
+            <button type="button" aria-label="Первый слайд"></button>
+            <button class="active-tab" type="button" aria-label="Второй слайд"></button>
+          </div>
         </div>
-
-
-
         <ul class="list-products">
           <li class="list-products-item list-products-item--material new-thing">
             <h3 class="list-products-item--title">Материалы</h3>
@@ -133,8 +134,8 @@
         <ul class="list-popular-product">
           <li class="list-popular-product-item">
             <div class="buttons-hover-wrap">
-              <a class="button button-buy">Купить</a>
-              <a class="button button-tabs">В закладки</a>
+              <a class="button button-buy" href="#">Купить</a>
+              <a class="button button-tabs" href="#">В закладки</a>
             </div>
             <img class="img-product" src="img/boschbfg-9000.jpg" width="218" height="180" alt="">
             <h3 class="popular-product-description">Перфоратор BOSCH BFG 9000</h3>
@@ -143,8 +144,8 @@
           </li>
           <li class="list-popular-product-item new-thing">
             <div class="buttons-hover-wrap">
-              <a class="button button-buy">Купить</a>
-              <a class="button button-tabs">В закладки</a>
+              <a class="button button-buy" href="#">Купить</a>
+              <a class="button button-tabs" href="#">В закладки</a>
             </div>
             <img class="img-product" src="img/boschbfg-3000.jpg" width="218" height="180" alt="">
             <h3 class="popular-product-description">Перфоратор BOSCH BFG 3000</h3>
@@ -153,8 +154,8 @@
           </li>
           <li class="list-popular-product-item">
             <div class="buttons-hover-wrap">
-              <a class="button button-buy">Купить</a>
-              <a class="button button-tabs">В закладки</a>
+              <a class="button button-buy" href="#">Купить</a>
+              <a class="button button-tabs" href="#">В закладки</a>
             </div>
             <img class="img-product" src="img/boschbfg-6000.jpg" width="218" height="180" alt="">
             <h3 class="popular-product-description">Перфоратор BOSCH BFG 6000</h3>
@@ -163,8 +164,8 @@
           </li>
           <li class="list-popular-product-item new-thing">
             <div class="buttons-hover-wrap">
-              <a class="button button-buy">Купить</a>
-              <a class="button button-tabs">В закладки</a>
+              <a class="button button-buy" href="#">Купить</a>
+              <a class="button button-tabs" href="#">В закладки</a>
             </div>
             <img class="img-product" src="img/boschbfg-2000.jpg" width="218" height="180" alt="">
             <h3 class="popular-product-description">Перфоратор BOSCH BFG 2000</h3>
@@ -199,7 +200,7 @@
       </section>
     </div>
     <section class="services">
-      <div class="container grid-services">
+      <div class="container">
         <div class="about-service">
           <h2 class="title">Сервисы</h2>
           <p class="description services-description">
@@ -207,14 +208,15 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
         </div>
-        <div class="slider-services">
+        <div class="grid-services slider-services">
           <ul class="list-services">
             <a class="list-services-item activate" href="#">Доставка</a>
             <a class="list-services-item" href="#">Гарантия</a>
             <a class="list-services-item" href="#">Кредит</a>
           </ul>
-          <ul>
-            <div class="description-services-item--activate description-services-item--delivery">
+          <ul class="slider-services-list">
+            <li
+              class="description-services-item description-services-item--activate description-services-item--delivery">
               <h3 class="title">Доставка</h3>
 
               <p class="description services-description--activate">
@@ -223,8 +225,8 @@
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!
               </p>
-            </div>
-            <div class="description-services-item--guarantee">
+            </li>
+            <li class="description-services-item description-services-item--guarantee">
               <h3 class="title">Гарантия</h3>
 
               <p class="description">
@@ -233,8 +235,8 @@
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!
               </p>
-            </div>
-            <div class="description-services-item--credit">
+            </li>
+            <li class="description-services-item description-services-item--credit">
               <h3 class="title">Кредит</h3>
 
               <p class="description">
@@ -243,7 +245,7 @@
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!
               </p>
-            </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -289,7 +291,7 @@
     <div class="container footer-top">
       <section class="contacts-footer">
         <h2 class="hidden">адрес</h2>
-        <a class="logo-footer">
+        <a class="logo-footer" href="#">
           <img src="img/logo-technomart.svg" alt="Logo_Texnomart" width="138" height="23">
         </a>
         <p class="contact-footer-description">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>+7 (812) 555-05-55</p>
@@ -328,18 +330,19 @@
         <section class="social">
           <h2 class="hidden">Соцсети</h2>
           <ul class="list-social">
-            <li class="list-social-item"><a class="social-button" href="#"><img src="img/icon-vk.svg"
-                  alt="Вконтакте"></a></li>
-            <li class="list-social-item"><a class="social-button" href="#"><img src="img/icon-fb.svg" alt="Фейсбук"></a>
+            <li class="list-social-item"><a class="social-button" href="#" aria-label="вконтакте"><img
+                  src="img/icon-vk.svg" alt=""></a></li>
+            <li class="list-social-item"><a class="social-button" href="#" aria-label="фейсбук"><img
+                  src="img/icon-fb.svg" alt=""></a>
             </li>
-            <li class="list-social-item"><a class="social-button" href="#"><img src="img/icon-insta.svg"
-                  alt="Инстаграм"></a></li>
+            <li class="list-social-item"><a class="social-button" href="#" aria-label="инстаграм"><img
+                  src="img/icon-insta.svg" alt=""></a></li>
           </ul>
         </section>
 
         <p class="mail">
           Обратная связь:<br>
-          <span class="mail-address">mail@htmlacademy.ru</span>
+          <a class="mail-address" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
         <p class="maker">
           Разработано-<br>
