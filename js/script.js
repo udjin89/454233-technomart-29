@@ -91,3 +91,26 @@ closeButtonCart.addEventListener("click", function (evt) {
   console.log("Add class hidden");
 });
 
+// +++++++++++++++++Slider+++++++++++++++++
+
+const galleryContent = document.querySelector(".gallery-content");
+if(galleryContent){
+  const listSliderItem = galleryContent.querySelectorAll(".slider-item");
+  const buttonBack = galleryContent.querySelector(".slider-control--left");
+  const buttonNext = galleryContent.querySelector(".slider-control--right");
+
+  console.log(listSliderItem);
+
+  buttonNext.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    console.log("Click buttonNext");
+    // modalCart.classList.add("hidden");
+
+  });
+  buttonBack.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    console.log("Click buttonBack");
+    // modalCart.classList.add("hidden");
+
+  });
+}
