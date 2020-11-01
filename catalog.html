@@ -54,7 +54,7 @@
               </svg>
             Равшан Джамшутович
           </a>
-          <a class="button-account--logout" href="logout.html">
+          <a class="button-account--logout" href="#">
             <svg class="icon-logout" width="20" height="17" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" />
               <path
@@ -75,12 +75,12 @@
       <nav class="navigation">
         <ul class="list-navigation">
           <li class="list-navigation-item"><a class="navigation-link" href="index.html">Главная</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Компания</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Компания</a></li>
           <li class="list-navigation-item"><a class="navigation-link" href="catalog.html">Каталог</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Новости</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Спецпредложения</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Доставка</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Контакты</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Новости</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Спецпредложения</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -88,8 +88,7 @@
   <main class="main">
     <div class="container">
       <ul class="breadcrumbs">
-        <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#"><img src="img/icon-home.svg"
-              alt="Главная"></a></li>
+        <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#"><img src="img/icon-home.svg" alt="Главная" width="14" height="12"></a></li>
         <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Каталог</a></li>
         <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Инструмент</a></li>
         <li class="breadcrumbs-item breadcrumbs-item--current"><a class="breadcrumbs-link">Перфораторы</a></li>
@@ -101,7 +100,7 @@
           <h2 class="hidden title">Фильтр товаров</h2>
           <p class="title-sort title-filter">Фильтр:</p>
           <!-- Form -->
-          <form class="filter">
+          <form class="filter" action="https://echo.htmlacademy.ru" method="get">
             <!-- Цена -->
             <fieldset class="filter-item">
               <legend class="">Цена:</legend>
@@ -154,11 +153,11 @@
               <legend>Питание:</legend>
               <ul class="filter-option">
                 <li class="filter-option-item">
-                  <input type="radio" name="power" id="battery" checked class="filter-input-radio hidden">
+                  <input type="radio" name="power" value="battery" id="battery" checked class="filter-input-radio hidden">
                   <label for="battery" class="label">Аккумуляторные</label>
                 </li>
                 <li class="filter-option-item">
-                  <input type="radio" name="power" id="networking" class="filter-input-radio hidden">
+                  <input type="radio" name="power" value="networking" id="networking" class="filter-input-radio hidden">
                   <label for="networking" class="label">Сетевые</label>
                 </li>
               </ul>
@@ -361,11 +360,11 @@
           <h2 class="hidden">Соцсети</h2>
           <ul class="list-social">
             <li class="list-social-item"><a class="social-button" href="#"><img src="img/icon-vk.svg"
-                  alt="Вконтакте"></a></li>
-            <li class="list-social-item"><a class="social-button" href="#"><img src="img/icon-fb.svg" alt="Фейсбук"></a>
+                  alt="Вконтакте" width="26" height="15"></a></li>
+            <li class="list-social-item"><a class="social-button" href="#"><img src="img/icon-fb.svg" alt="Фейсбук" width="12" height="22"></a>
             </li>
             <li class="list-social-item"><a class="social-button" href="#"><img src="img/icon-insta.svg"
-                  alt="Инстаграм"></a></li>
+                  alt="Инстаграм" width="21" height="21"></a></li>
           </ul>
         </section>
 
@@ -385,7 +384,7 @@
   <section class="hidden modal modal-add-cart">
     <h2 class="hidden">Добавление в корзину</h2>
     <button class="button-close" type="button" aria-label="Закрыть">
-      <img src="img/icon-close.png" alt="Закрыть">
+      <img src="img/icon-close.png" alt="Закрыть" width="21" height="21">
     </button>
     <svg class="icon-mark" width="66" height="66" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M33 66c18.225 0 33-14.775 33-33S51.225 0 33 0 0 14.775 0 33s14.775 33 33 33z" fill="#63A63E"/>

@@ -59,12 +59,12 @@
       <nav class="navigation">
         <ul class="list-navigation">
           <li class="list-navigation-item"><a class="navigation-link" href="#">Главная</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Компания</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Компания</a></li>
           <li class="list-navigation-item"><a class="navigation-link" href="catalog.html">Каталог</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Новости</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Спецпредложения</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Доставка</a></li>
-          <li class="list-navigation-item"><a class="navigation-link" href="blank.html">Контакты</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Новости</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Спецпредложения</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
+          <li class="list-navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -81,14 +81,16 @@
             <li class="slider-item slider-item--perf slider-current">
               <h2 class="title-slide">Перфораторы</h2>
               <p class="slide-description">Настоящие мужские игрушки</p>
-              <!-- <img src="img/slide-perf.jpg" width="620" height="266" alt="Рабочий с перфоратором"> -->
-
               <a class="button button-global button-open-catalog" href="catalog.html">Открыть каталог</a>
             </li>
             <li class="slider-item slider-item--drill ">
               <h2 class="title-slide">Дрели</h2>
               <p class="slide-description">Соседям на радость!</p>
-              <!-- <img class="hidden" src="img/slide-drill.jpg" width="620" height="266" alt="Рабочий с дрелью"> -->
+              <a class="button button-global button-open-catalog" href="catalog.html">Открыть каталог</a>
+            </li>
+            <li class="slider-item  ">
+              <h2 class="title-slide">Дрели</h2>
+              <p class="slide-description">Соседям на радость!</p>
               <a class="button button-global button-open-catalog" href="catalog.html">Открыть каталог</a>
             </li>
           </ul>
@@ -210,13 +212,12 @@
         </div>
         <div class="grid-services slider-services">
           <ul class="list-services">
-            <a class="list-services-item activate" href="#">Доставка</a>
-            <a class="list-services-item" href="#">Гарантия</a>
-            <a class="list-services-item" href="#">Кредит</a>
+            <li><a class="list-services-item activate" href="#">Доставка</a></li>
+            <li><a class="list-services-item" href="#">Гарантия</a></li>
+            <li><a class="list-services-item" href="#">Кредит</a></li>
           </ul>
           <ul class="slider-services-list">
-            <li
-              class="description-services-item description-services-item--activate description-services-item--delivery">
+            <li class="description-services-item description-services-item--activate description-services-item--delivery">
               <h3 class="title">Доставка</h3>
 
               <p class="description services-description--activate">
@@ -279,9 +280,9 @@
           заехав в наш офис:
         </p>
 
-        <img class="map" src="img/Map.png" width="300" height="158" alt="Карта с местоположением">
+        <img class="map" src="img/map.png" width="300" height="158" alt="Карта с местоположением">
 
-        <button class="button button-global button-write-us">Заблудились? Напишите нам!</button>
+        <a class="button button-global button-write-us" href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -331,12 +332,12 @@
           <h2 class="hidden">Соцсети</h2>
           <ul class="list-social">
             <li class="list-social-item"><a class="social-button" href="#" aria-label="вконтакте"><img
-                  src="img/icon-vk.svg" alt=""></a></li>
+                  src="img/icon-vk.svg" alt="" width="26" height="15"></a></li>
             <li class="list-social-item"><a class="social-button" href="#" aria-label="фейсбук"><img
-                  src="img/icon-fb.svg" alt=""></a>
+                  src="img/icon-fb.svg" alt="" width="12" height="22"></a>
             </li>
             <li class="list-social-item"><a class="social-button" href="#" aria-label="инстаграм"><img
-                  src="img/icon-insta.svg" alt=""></a></li>
+                  src="img/icon-insta.svg" alt="" width="21" height="21"></a></li>
           </ul>
         </section>
 
@@ -356,7 +357,7 @@
   <section class="hidden modal modal-write-us">
     <h2 class="hidden">Напишите нам</h2>
     <button class="button-close" aria-label="Закрыть">
-      <img src="img/icon-close.png" alt="Закрыть">
+      <img src="img/icon-close.png" alt="Закрыть" width="21" height="21">
     </button>
     <form class="form-write-us" action="write-us.php">
       <div class="modal-container grid-form-write-us">
@@ -380,7 +381,7 @@
   <section class="hidden modal modal-map">
     <h2 class="hidden">Карта</h2>
     <button class="button-close" aria-label="Закрыть">
-      <img src="img/icon-close.png" alt="Закрыть">
+      <img src="img/icon-close.png" alt="Закрыть" width="21" height="21">
     </button>
     <!-- Карта -->
     <iframe
@@ -392,7 +393,7 @@
   <section class="hidden modal modal-add-cart">
     <h2 class="hidden">Добавление в корзину</h2>
     <button class="button-close" aria-label="Закрыть">
-      <img src="img/icon-close.png" alt="Закрыть">
+      <img src="img/icon-close.png" alt="Закрыть" width="21" height="21">
     </button>
     <svg class="icon-mark" width="66" height="66" xmlns="http://www.w3.org/2000/svg">
       <path d="M33 66c18.225 0 33-14.775 33-33S51.225 0 33 0 0 14.775 0 33s14.775 33 33 33z" fill="#63A63E" />

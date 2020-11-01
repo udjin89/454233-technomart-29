@@ -93,6 +93,7 @@ closeButtonCart.addEventListener("click", function (evt) {
 
 // +++++++++++++++++Slider+++++++++++++++++
 
+let slideIndex = 0;
 const galleryContent = document.querySelector(".gallery-content");
 if(galleryContent){
   const listSliderItem = galleryContent.querySelectorAll(".slider-item");
@@ -104,13 +105,41 @@ if(galleryContent){
   buttonNext.addEventListener("click", function (evt) {
     evt.preventDefault();
     console.log("Click buttonNext");
-    // modalCart.classList.add("hidden");
+    slideIndex += 1;
+    showSlides(slideIndex, listSliderItem);
 
   });
   buttonBack.addEventListener("click", function (evt) {
     evt.preventDefault();
     console.log("Click buttonBack");
-    // modalCart.classList.add("hidden");
+    slideIndex -= 1;
+    showSlides(slideIndex, listSliderItem);
 
   });
+}
+/* Функция перелистывания: */
+function showSlides(n, slides) {
+  console.log("Slides count =" + slides.length);
+  console.log("next slide =" + n);
+
+  /* Проверяем количество слайдов: */
+  if (n == slides.length) {
+    slides[n-1].classList.remove("slider-current");
+    slideIndex = 0;
+    slides[0].classList.add("slider-current");
+    console.log("jump to fist slide");
+  }
+  else  if (n < 1) {
+      slides[n+1].classList.remove("slider-current");
+      slideIndex = slides.length - 1;
+      console.log("jump to last slide");
+      slides[slideIndex].classList.add("slider-current");
+  }
+    else
+    {
+      /* Делаем элемент блочным: */
+      slides[n-1].classList.remove("slider-current");
+      slides[n].classList.add("slider-current");
+    }
+    console.log("index =" + slideIndex);
 }
