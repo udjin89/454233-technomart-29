@@ -21,6 +21,7 @@
   --special-beige: #F7F3EC;
   --special-scale-color: #D7DCDE;
   --special-greyight: #B5B5B5;
+  --special-red: #FF5357;
 
 	--hover-greenlight: #5FBB2D;
 	--active-greendark: #518534;
@@ -110,6 +111,14 @@ img{
 .button-all-makers{
   margin-left: auto;
   min-width: 192px;
+}
+.button-send-order{
+  margin-top: 15px;
+  padding-left: 48px;
+  padding-right: 42px;
+  background-color: var(--special-red);
+  border-radius: 2px;
+
 }
 .button-about-company{
   margin-top: 20px;
@@ -939,12 +948,12 @@ img{
   background-position: right bottom;
 }
 .description-services-item--guarantee{
-  background-image: url(../img/truck.png);
+  background-image: url(../img/guarantee.png);
   background-repeat: no-repeat;
   background-position: right bottom;
 }
 .description-services-item--credit{
-  background-image: url(../img/truck.png);
+  background-image: url(../img/credit.png);
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -971,7 +980,10 @@ img{
 	color: var(--basic-mediumgrey);
 	background-color: var(--white);
 }
-
+.description-credit{
+  margin-top: 28px;
+  margin-bottom: 35px;
+}
 /* Section company */
 .grid-company-contacts{
   padding-top: 70px;
@@ -1239,15 +1251,14 @@ img{
 	line-height: 18px;
 	text-transform: uppercase;
   text-decoration: none;
-}
-.breadcrumbs-link:visited {
-	color: inherit;
+  color: var(--black);
 }
 .breadcrumbs-link:hover {
-	color: inherit;
+  color: var(--basic-greylight);
+
 }
 .breadcrumbs-link:active {
-	color: inherit;
+	color: var(--active-greylight);
 }
 .title-catalog{
   padding: 29px 0 30px 29px;
@@ -1450,6 +1461,7 @@ img{
   display: block;
   padding: 10px 15px;
   margin-right: 10px;
+  color: var(--black);
 }
 .pagination-link--next{
   padding: 10px 31px;
@@ -1615,7 +1627,7 @@ input[type="number"]:focus {
 }
 input[type="checkbox"]:focus + label,
 input[type="radio"]:focus + label{
-  border: 1px solid var(--black);
+  color: var(--special-greyight);
 }
 .button-form--filter{
   padding: 10px 0;
