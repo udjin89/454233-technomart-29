@@ -12,6 +12,7 @@ if(modalWriteUs){
       if(!modalWriteUs.classList.contains("hidden")){
         evt.preventDefault();
         modalWriteUs.classList.add("hidden");
+        modalWriteUs.classList.remove("modal-show");
       }
     }
   });
@@ -20,6 +21,7 @@ if(modalWriteUs){
     evt.preventDefault();
     console.log("Click button");
     modalWriteUs.classList.remove("hidden");
+    modalWriteUs.classList.add("modal-show");
     name.focus();
     console.log("Delete class hidden and focus name");
   });
@@ -28,6 +30,7 @@ if(modalWriteUs){
     evt.preventDefault();
     console.log("Click closeButton");
     modalWriteUs.classList.add("hidden");
+    modalWriteUs.classList.remove("modal-show");
     console.log("Add class hidden");
   });
 }
@@ -42,6 +45,7 @@ if(modalMap){
       if(!modalMap.classList.contains("hidden")){
         evt.preventDefault();
         modalMap.classList.add("hidden");
+        modalMap.classList.remove("modal-show");
       }
     }
   });
@@ -50,6 +54,7 @@ if(modalMap){
     evt.preventDefault();
     console.log("Click map");
     modalMap.classList.remove("hidden");
+    modalMap.classList.add("modal-show");
     console.log("Delete class hidden and show map");
   });
 
@@ -57,6 +62,7 @@ if(modalMap){
     evt.preventDefault();
     console.log("Click closeButtonMap");
     modalMap.classList.add("hidden");
+    modalMap.classList.remove("modal-show");
     console.log("Add class hidden");
   });
 }
@@ -71,6 +77,7 @@ for (var i = 0; i < buttonBuy.length; i++) {
     evt.preventDefault();
     console.log("Click Buy");
     modalCart.classList.remove("hidden");
+    modalCart.classList.add("modal-show");
     console.log("Show message!");
     });
 }
@@ -80,6 +87,7 @@ window.addEventListener("keydown", function(evt){
     if(!modalCart.classList.contains("hidden")){
       evt.preventDefault();
       modalCart.classList.add("hidden");
+      modalCart.classList.remove("modal-show");
     }
   }
 });
@@ -88,19 +96,39 @@ closeButtonCart.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("Click closeButtonCart");
   modalCart.classList.add("hidden");
+  modalCart.classList.remove("modal-show");
   console.log("Add class hidden");
 });
-
-// +++++++++++++++++Slider+++++++++++++++++
-
-let slideIndex = 0;
+// Slider
+let slideIndex = 1; // текущий слайд
 const galleryContent = document.querySelector(".gallery-content");
 if(galleryContent){
   const listSliderItem = galleryContent.querySelectorAll(".slider-item");
   const buttonBack = galleryContent.querySelector(".slider-control--left");
   const buttonNext = galleryContent.querySelector(".slider-control--right");
+  const sliderTabs = galleryContent.querySelector(".slider-tabs");
 
-  console.log(listSliderItem);
+  const listTabs = sliderTabs.getElementsByTagName("button");
+
+  for(let i = 0; i < listTabs.length; i++){
+
+    listTabs[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      console.log("Click Tab Slide");
+
+      for(let j = 0; j < listTabs.length; j++)
+      {
+        listTabs[j].classList.remove("active-tab");
+        listSliderItem[j].classList.remove("slider-current");
+      }
+
+      listTabs[i].classList.add("active-tab");
+      listSliderItem[i].classList.add("slider-current");
+
+    });
+  }
+
+  console.log(listTabs);
 
   buttonNext.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -118,28 +146,50 @@ if(galleryContent){
   });
 }
 /* Функция перелистывания: */
-function showSlides(n, slides) {
-  console.log("Slides count =" + slides.length);
-  console.log("next slide =" + n);
+function showSlides(index, listSlides)
+  {
+    console.log("Function receive: index = " + index + "  listSlides = " + listSlides);
 
-  /* Проверяем количество слайдов: */
-  if (n == slides.length) {
-    slides[n-1].classList.remove("slider-current");
-    slideIndex = 0;
-    slides[0].classList.add("slider-current");
-    console.log("jump to fist slide");
-  }
-  else  if (n < 1) {
-      slides[n+1].classList.remove("slider-current");
-      slideIndex = slides.length - 1;
-      console.log("jump to last slide");
-      slides[slideIndex].classList.add("slider-current");
-  }
-    else
-    {
-      /* Делаем элемент блочным: */
-      slides[n-1].classList.remove("slider-current");
-      slides[n].classList.add("slider-current");
+    if(index < 1){
+      slideIndex = listSlides.length;
+      console.log("index < 1, now index = " + listSlides.length);
     }
-    console.log("index =" + slideIndex);
-}
+    if(index > listSlides.length){
+      slideIndex = 1;
+      console.log("index > " + listSlides.length +", now index = 1");
+    }
+
+    for( let i=0; i < listSlides.length; i++){
+      listSlides[i].classList.remove("slider-current");
+    }
+    listSlides[slideIndex -1].classList.add("slider-current");
+  }
+
+
+  /* Сервисы */
+  const services = document.querySelector(".slider-services");
+  if(services){
+    const listServicesItem = services.querySelectorAll(".list-services-item");
+    const listServicesDescription = services.querySelectorAll(".description-services-item");
+
+    for(let i = 0; i < listServicesItem.length; i++){
+      let tab = listServicesItem[i];
+
+      tab.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        console.log("Click Tab = " + i);
+        activateSlide(i, listServicesItem, listServicesDescription);
+
+      });
+    }
+  }
+  function activateSlide(index, listServicesItem, listServicesDescription){
+
+    for( let i=0; i < listServicesItem.length; i++){
+      listServicesItem[i].classList.remove("activate");
+      listServicesDescription[i].classList.remove("description-services-item--activate");
+    }
+    listServicesItem[index].classList.add("activate");
+    listServicesDescription[index].classList.add("description-services-item--activate");
+  }
+
