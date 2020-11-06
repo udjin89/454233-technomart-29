@@ -1,5 +1,3 @@
-
-console.log("script on")
 // Кнопка с отправкой формы "Напишите нам" ----------------------
 const writeUs = document.querySelector(".button-write-us");
 const modalWriteUs = document.querySelector(".modal-write-us");
@@ -13,6 +11,7 @@ if(modalWriteUs){
         evt.preventDefault();
         modalWriteUs.classList.add("hidden");
         modalWriteUs.classList.remove("modal-show");
+        modalWriteUs.classList.remove("modal-error");
       }
     }
   });
@@ -33,7 +32,27 @@ if(modalWriteUs){
     modalWriteUs.classList.remove("modal-show");
     console.log("Add class hidden");
   });
+
+  const formWrite = modalWriteUs.querySelector("form");
+  const userName = formWrite.querySelector("[name=userName]");
+  const userEmail = formWrite.querySelector("[name=userEmail]");
+  const userComment = formWrite.querySelector("[name=userComment]");
+
+  formWrite.addEventListener("submit", function(evt){
+     evt.preventDefault();
+    console.log("Send form");
+    // console.log(userName.value);
+    // console.log(userEmail.value);
+    // console.log(userComment.value);
+    if(!userName.value || !userEmail.value || !userComment.value){
+      console.log("Error");
+      formWrite.classList.add("modal-error");
+    }
+  });
 }
+
+
+
 // Кнопка открытия карты ----------------------
 const map = document.querySelector(".map");
 const modalMap = document.querySelector(".modal-map");

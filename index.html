@@ -9,8 +9,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/min.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -355,15 +355,18 @@
     <button class="button-close" aria-label="Закрыть">
       <img src="img/icon-close.png" alt="Закрыть" width="21" height="21">
     </button>
-    <form class="form-write-us" action="write-us.php">
+    <form class="form-write-us" action="https://echo.htmlacademy.ru" method="post">
       <div class="modal-container grid-form-write-us">
-        <label class="label-name">Ваше имя:<br><input class="field field-name" type="text" placeholder="Имя Фамилия"
-            required></label>
-        <label class="label-email">Ваш e-mail:<br><input class="field field-email" type="email"
-            placeholder="email@example.com" required></label>
+        <label class="label-name">Ваше имя:<br>
+          <input class="field field-name" name="userName" type="text" placeholder="Имя Фамилия"
+            >
+          </label>
+        <label class="label-email">Ваш e-mail:<br>
+          <input class="field field-email" name="userEmail" type="email" placeholder="email@example.com" >
+          </label>
         <p class="text-write-us">Текст письма:
-          <textarea class="field text-comment" name="comment" id="comment-field" rows="10"
-            placeholder="В свободной форме" required></textarea>
+          <textarea class="field text-comment" name="userComment" id="comment-field" rows="10"
+            placeholder="В свободной форме" ></textarea>
             <label for="comment-field" class="hidden">Текст комментария</label>
         </p>
       </div>
@@ -404,7 +407,7 @@
       <button class="button button-resume">Продолжить покупки</button>
     </div>
   </section>
-  <script src="js/min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

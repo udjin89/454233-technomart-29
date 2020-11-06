@@ -1742,9 +1742,19 @@ input[type="radio"]:focus + label{
   70%   { transform: translateY( 100px);}
   100%  { transform: translateY(0);}
 }
+@keyframes shake {
+  0%, 100%    { transform: translateX(0);}
+  10%, 30%, 50%   { transform: translateX(-110px);}
+  20%, 40%  { transform: translateX(110px);}
+}
 .modal-show{
   animation-name: modalShow;
   animation-duration: 0.5s;
+}
+.modal-error{
+  animation-name: shake;
+  animation-duration: 1s;
+  background-color: pink;
 }
 .modal-write-us{
   width: 620px;
