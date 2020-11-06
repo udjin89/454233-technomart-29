@@ -30,6 +30,7 @@ if(modalWriteUs){
     console.log("Click closeButton");
     modalWriteUs.classList.add("hidden");
     modalWriteUs.classList.remove("modal-show");
+    modalWriteUs.classList.remove("modal-error");
     console.log("Add class hidden");
   });
 
@@ -39,20 +40,16 @@ if(modalWriteUs){
   const userComment = formWrite.querySelector("[name=userComment]");
 
   formWrite.addEventListener("submit", function(evt){
-     evt.preventDefault();
-    console.log("Send form");
-    // console.log(userName.value);
-    // console.log(userEmail.value);
-    // console.log(userComment.value);
     if(!userName.value || !userEmail.value || !userComment.value){
+      evt.preventDefault();
       console.log("Error");
-      formWrite.classList.add("modal-error");
+      modalWriteUs.classList.remove("modal-error");
+      setTimeout(function(){
+        modalWriteUs.classList.add("modal-error");
+      }, 0);
     }
   });
 }
-
-
-
 // Кнопка открытия карты ----------------------
 const map = document.querySelector(".map");
 const modalMap = document.querySelector(".modal-map");

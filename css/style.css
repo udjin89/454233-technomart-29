@@ -1753,8 +1753,7 @@ input[type="radio"]:focus + label{
 }
 .modal-error{
   animation-name: shake;
-  animation-duration: 1s;
-  background-color: pink;
+  animation-duration: 0.5s;
 }
 .modal-write-us{
   width: 620px;
