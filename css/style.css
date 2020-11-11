@@ -1730,25 +1730,37 @@ input[type="radio"]:focus + label{
   position: fixed;
   z-index: 100;
   margin:auto;
-  top: 120px;
+  /* top: 120px; */
+  top: 50%;
+  transform: translateY(-50%);
   left:0;
   right:0;
   background-color: var(--white);
   border-top: 7px solid var(--basic-red);
   filter: drop-shadow(0px 4px 4px var(--black-transparent25));
 }
-@keyframes modalShow {
+@keyframes modalShowY {
   0%    { transform: translateY(-1000px);}
-  70%   { transform: translateY( 100px);}
-  100%  { transform: translateY(0);}
+  /* 50%   { transform: translateY( 100px);} */
+  60%   { transform: translate(0);}
+  100%  { transform: translateY(-50%);}
+}
+@keyframes modalShowX {
+  0%    { transform: translate(-1200px, -50%);}
+  70%   { transform: translate( 100px, -50%);}
+  100%  { transform: translate(0, -50%);}
 }
 @keyframes shake {
-  0%, 100%    { transform: translateX(0);}
-  10%, 30%, 50%   { transform: translateX(-110px);}
-  20%, 40%  { transform: translateX(110px);}
+  0%, 100%                { transform: translate(0, -50%);}
+  10%, 30%, 50%, 70%, 90% { transform: translate(-10px, -50%);}
+  20%, 40%, 60% ,80%      { transform: translate(10px, -50%);}
 }
-.modal-show{
-  animation-name: modalShow;
+.modal-showY{
+  animation-name: modalShowY;
+  animation-duration: 0.5s;
+}
+.modal-showX{
+  animation-name: modalShowX;
   animation-duration: 0.5s;
 }
 .modal-error{

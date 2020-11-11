@@ -10,7 +10,7 @@ if(modalWriteUs){
       if(!modalWriteUs.classList.contains("hidden")){
         evt.preventDefault();
         modalWriteUs.classList.add("hidden");
-        modalWriteUs.classList.remove("modal-show");
+        modalWriteUs.classList.remove("modal-showX");
         modalWriteUs.classList.remove("modal-error");
       }
     }
@@ -20,7 +20,7 @@ if(modalWriteUs){
     evt.preventDefault();
     console.log("Click button");
     modalWriteUs.classList.remove("hidden");
-    modalWriteUs.classList.add("modal-show");
+    modalWriteUs.classList.add("modal-showX");
     name.focus();
     console.log("Delete class hidden and focus name");
   });
@@ -29,7 +29,7 @@ if(modalWriteUs){
     evt.preventDefault();
     console.log("Click closeButton");
     modalWriteUs.classList.add("hidden");
-    modalWriteUs.classList.remove("modal-show");
+    modalWriteUs.classList.remove("modal-showX");
     modalWriteUs.classList.remove("modal-error");
     console.log("Add class hidden");
   });
@@ -93,7 +93,7 @@ for (var i = 0; i < buttonBuy.length; i++) {
     evt.preventDefault();
     console.log("Click Buy");
     modalCart.classList.remove("hidden");
-    modalCart.classList.add("modal-show");
+    modalCart.classList.add("modal-showY");
     console.log("Show message!");
     });
 }
@@ -103,7 +103,7 @@ window.addEventListener("keydown", function(evt){
     if(!modalCart.classList.contains("hidden")){
       evt.preventDefault();
       modalCart.classList.add("hidden");
-      modalCart.classList.remove("modal-show");
+      modalCart.classList.remove("modal-showY");
     }
   }
 });
@@ -112,7 +112,7 @@ closeButtonCart.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("Click closeButtonCart");
   modalCart.classList.add("hidden");
-  modalCart.classList.remove("modal-show");
+  modalCart.classList.remove("modal-showY");
   console.log("Add class hidden");
 });
 // Slider
